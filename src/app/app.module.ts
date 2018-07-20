@@ -10,6 +10,8 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { firebaseConfig } from '../config';
+import { LoginPageModule } from './../pages/login/login.module';
+
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { firebaseConfig } from '../config';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(firebaseConfig),
+    LoginPageModule
+
 
   ],
   bootstrap: [IonicApp],
