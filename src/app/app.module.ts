@@ -12,6 +12,8 @@ import { AngularFireDatabase } from 'angularfire2/database';
 import { firebaseConfig } from '../config';
 import { LoginPageModule } from './../pages/login/login.module';
 import { AuthProvider } from '../providers/auth/auth';
+import { SignupPageModule } from './../pages/signup/signup.module';
+
 
 
 
@@ -24,7 +26,8 @@ import { AuthProvider } from '../providers/auth/auth';
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseConfig),
-    LoginPageModule
+    LoginPageModule,
+    SignupPageModule
 
 
   ],

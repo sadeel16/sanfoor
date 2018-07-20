@@ -1,3 +1,4 @@
+import { SignupPage } from './../signup/signup';
 import { HomePage } from './../home/home';
 import { AuthProvider } from './../../providers/auth/auth';
 import { Component } from '@angular/core';
@@ -34,6 +35,8 @@ export class LoginPage {
  }
 
  signup() {
+   this.navCtrl.push(SignupPage);
+
    //
  }
 
