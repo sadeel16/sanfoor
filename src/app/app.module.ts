@@ -11,6 +11,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { firebaseConfig } from '../config';
 import { LoginPageModule } from './../pages/login/login.module';
+import { AuthProvider } from '../providers/auth/auth';
 
 
 
@@ -38,6 +39,7 @@ import { LoginPageModule } from './../pages/login/login.module';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AngularFireAuth,
    AngularFireDatabase,
+    AuthProvider,
 
   ]
 })
