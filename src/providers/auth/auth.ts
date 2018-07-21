@@ -25,6 +25,11 @@ export class AuthProvider {
     credentials.password
   );
 }
+getEmail() {
+  return this.user && this.user.email;
+}
+
+
 
 
 }
