@@ -1,3 +1,5 @@
+import { ResidenceProfilePageModule } from './../pages/residence-profile/residence-profile.module';
+import { ResidenceProfilePage } from './../pages/residence-profile/residence-profile';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -27,14 +29,16 @@ import { SignupPageModule } from './../pages/signup/signup.module';
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseConfig),
     LoginPageModule,
-    SignupPageModule
+    SignupPageModule,
+    ResidenceProfilePageModule
 
 
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    ResidenceProfilePage
   ],
   providers: [
     StatusBar,
