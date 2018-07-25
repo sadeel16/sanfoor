@@ -1,18 +1,84 @@
-<!--
-  Generated template for the HomePage page.
+<div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+    <div class="flb">
+      <div class="Aligner-item Aligner-item--top"></div>
+      <img src="../assets/imgs/logo5.png">
+      <img src="../assets/imgs/sanfoor.png">
+      <div class="Aligner-item Aligner-item--bottom"></div>
+    </div>
+  </div>
+<ion-content>
+  <!-- <div>
+  <h1 style=" background-color: #55acee; font-family: Tahoma; color: white; float: left;">Recent Deals:</h1>
+  </div> -->
+  <button ion-button round outline style="float:right; margin-top:4%;" >Offer your residence?</button>
+  <ion-slides autoplay = "3000" loop = "true" speed = "3000" effect="fade" >
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
+    <ion-slide *ngFor = "let image of ImageArray" >
+    
+    <img src= "{{image.image}}" style="margin-bottom: 550px; width: 400px ;height: 220px ">
+    </ion-slide >
+  </ion-slides>
 
-  <ion-navbar>
-    <ion-title>home</ion-title>
-  </ion-navbar>
+  <!-- <h1>If you are a student, pleases choose your college.</h1> -->
+  <div  style="margin-top: -420px;">
+  <ion-card style="width: 40%; height: 35%; float: left; margin-top: -5px;">
+    <img src="../assets/imgs/Najah.png" />
+    <ion-card-content>
+      <ion-card-title>
+        Najah 
+        </ion-card-title>
+        </ion-card-content>
+        </ion-card>
+      
+        <ion-card style="width: 40%; height: 35%; float: right;">
+            <img src="../assets/imgs/American.png" class="cardsImages" />
+            <ion-card-content>
+              <ion-card-title>
+                American 
+                </ion-card-title>
+              </ion-card-content>
+            </ion-card>
 
-</ion-header>
+    <ion-card style="width: 40%; height: 35%; float:right;">
+        <img src="../assets/imgs/Birzeit.png" class="cardsImages"/>
+        <ion-card-content>
+          <ion-card-title>
+            Birzeit 
+            </ion-card-title>
+            </ion-card-content>
+            </ion-card>
+    
+    
+
+    <ion-card style="width: 40%; height: 35%; float:left; ">
+        <img src="../assets/imgs/AbuDeis.png" class="cardsImages"/>
+        <ion-card-content>
+          <ion-card-title>
+            Abu-Deis 
+            </ion-card-title>
+          </ion-card-content>
+        </ion-card>
+
+        <ion-card style="width: 40%; height: 35%; float:right; ">
+          <img src="../assets/imgs/Polytechnic.png" class="cardsImages" />
+          <ion-card-content>
+            <ion-card-title>
+              Polytechnic 
+              </ion-card-title>
+            </ion-card-content>
+          </ion-card>
 
 
-<ion-content padding>
-
-</ion-content>
+          <ion-card style="width: 40%; height: 35%; float:left; ">
+            <img src="../assets/imgs/Khadoorie.jpg" class="cardsImages"  />
+            <ion-card-content>
+              <ion-card-title>
+                Khadoorie 
+                </ion-card-title>
+              </ion-card-content>
+            </ion-card>
+    
+    <!-- </ion-card-content> -->
+  <!-- </div> --
+    >
+  <!-- </ion-card> -->
