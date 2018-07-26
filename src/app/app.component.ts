@@ -21,7 +21,7 @@ export class MyApp {
           if (user) {
             this.rootPage = HomePage;
           } else {
-            this.rootPage = LoginPage;
+            this.rootPage = HomePage;
           }
           statusBar.styleDefault();
           splashScreen.hide();

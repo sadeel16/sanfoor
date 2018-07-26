@@ -10,13 +10,13 @@
     <br>
     <button ion-button outline style="margin-left: 13px">User Name</button>
     <div float-right>
-      <ion-icon name="add" style="padding: 5px 15px; font-size: 35px;">
+      <ion-icon (click) = "openquestionpage()" name="add" style="padding: 5px 15px; font-size: 35px;">
 
     </ion-icon>
   </div>
   
   
-  <ion-card>
+  <ion-card  *ngFor="let post of posts | async">
     <img src="../assets/imgs/sakann.jpg" />
     <ion-card-content>
       <ion-card-title>
@@ -27,7 +27,7 @@
           <ion-col>
             <button ion-button icon-start clear small>
               <ion-icon name=""></ion-icon>
-              <ion-item *ngFor="let post of posts | async"  (click)="selectpost(post.key)">
+              <ion-item >
                 {{ post.payload.val().description }} 
                </ion-item>
                  
@@ -46,7 +46,7 @@
           </ion-row>
         </p>
         <div float-right>
-          <button ion-button outlinestyle="margin-left: 75px">Edit</button>
+          <button  (click)="selectpost(post.key)" ion-button outlinestyle="margin-left: 75px">Edit</button>
 
       </div>
     </ion-card-content>

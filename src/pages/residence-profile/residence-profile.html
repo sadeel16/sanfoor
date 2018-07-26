@@ -1,41 +1,52 @@
-
+<ion-header>
+  <ion-navbar>
+    <ion-title>Residence Profile</ion-title>
+    <ion-col center text-center>
+    </ion-col>
+  </ion-navbar>
+</ion-header>
 <ion-content padding>
-    <div *ngIf="post">
-     
-        {{post | json}}
-      
-      </div>
+  <div *ngIf="post">
 
-    <ion-slides autoplay = "3000" loop = "true" speed = "3000" style="margin-top: -180px">
-    <ion-slide *ngFor = "let image of ImageArray">
+
+  </div>
+
+  <ion-slides autoplay="3000" loop="true" speed="3000" style="margin-top: -180px">
+    <ion-slide *ngFor="let image of ImageArray">
       <img src="{{image.image}}" style="width: 100%; height: 200px;">
     </ion-slide>
   </ion-slides>
-  <div style="margin-top: -200px">
-  <ion-item>
-      <ion-label color="primary">Location</ion-label>
-      
+  <div *ngIf = "post" style="margin-top: -200px">
+    <ion-item>
+      <ion-label color="primary">{{post.location}}</ion-label>
+
+
     </ion-item>
     <ion-item>
-        <ion-label color="primary">Transportaion</ion-label>
-        
-      </ion-item>
-      <ion-item>
-          <ion-label color="primary">Rooms</ion-label>
-          
-        </ion-item>
-        <ion-item>
-            <ion-label color="primary">Extra Services</ion-label>
-            
-          </ion-item>
-          <ion-item>
-              <ion-label color="primary">Security</ion-label>
-              
-            </ion-item>
-            <ion-item>
-              <ion-label color="primary">Price</ion-label>
-              
-            </ion-item>
-            </div>
-            
+      <ion-label color="primary">{{post.transportation}}</ion-label>
+
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">{{post.services}}</ion-label>
+
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">{{post.gender}}</ion-label>
+
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">{{post.location}}</ion-label>
+
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">{{post.price}}</ion-label>
+
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary">{{post.descriptions}}</ion-label>
+
+    </ion-item>
+  </div>
+
 </ion-content>

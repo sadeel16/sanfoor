@@ -1,8 +1,9 @@
+import { SellerProfilePage } from './../seller-profile/seller-profile';
 import { QuestionsPage } from './../questions/questions';
 import { AuthProvider } from './../../providers/auth/auth';
 import { LoginPage } from './../login/login';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { ResidencefilterPage } from '../residencefilter/residencefilter';
 
 @IonicPage()
@@ -15,7 +16,10 @@ export class HomePage {
   ImageArray: any = [];
 
 
-  constructor(public navCtrl: NavController, private auth: AuthProvider,public navParams: NavParams) {
+  constructor(public navCtrl: NavController,
+    private auth: AuthProvider,
+    public navParams: NavParams,
+    private toastCtrl: ToastController) {
     this.ImageArray = [
       {'image': '../assets/imgs/img1.jpg'},
       {'image': '../assets/imgs/RecentDeals.png'},
@@ -31,11 +35,23 @@ movetologin(){
 }
 signOut() {
   this.auth.signOut();
-  this.navCtrl.setRoot(LoginPage);
+  let toast = this.toastCtrl.create({
+    message: 'LogOut successfully',
+    duration: 3000,
+    position: 'top'
+  });
+
+  toast.present();
 }
 
-questionpage(){
-  this.navCtrl.push(QuestionsPage);
+SignIn(){
+  if (this.auth.isLoggedIn()){
+    this.navCtrl.push(SellerProfilePage);
+  }
+  else{
+    this.navCtrl.push(LoginPage);
+  }
+  
 }
 movetoresidencelist(){
   this.navCtrl.push(ResidencefilterPage,{
@@ -44,6 +60,10 @@ movetoresidencelist(){
 
 ionViewDidLoad() {
   setTimeout(() => this.splash = false, 4000);
+}
+
+gotonajah(){
+  this.navCtrl.push(ResidencefilterPage);
 }
 
 }

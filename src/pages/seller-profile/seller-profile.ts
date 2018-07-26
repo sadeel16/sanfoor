@@ -1,3 +1,5 @@
+import { QuestionsPage } from './../questions/questions';
+import { HomePage } from './../home/home';
 import { ResidenceProfilePage } from './../residence-profile/residence-profile';
 import { Observable } from 'rxjs';
 import { AuthProvider } from './../../providers/auth/auth';
@@ -36,6 +38,10 @@ export class SellerProfilePage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad SellerProfilePage');
   
+  }
+
+  openquestionpage(){
+    this.navCtrl.push(QuestionsPage);
   }
 
 }

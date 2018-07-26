@@ -1,3 +1,4 @@
+import { SellerProfilePage } from './../seller-profile/seller-profile';
 import { SignupPage } from './../signup/signup';
 import { HomePage } from './../home/home';
 import { AuthProvider } from './../../providers/auth/auth';
@@ -29,7 +30,7 @@ export class LoginPage {
      password: this.password
    };
    this.auth.signInWithEmail(credentials).then(
-     () => this.navCtrl.setRoot(HomePage),
+     () => this.navCtrl.setRoot(SellerProfilePage),
      error => this.loginError = error.message
    );
  }

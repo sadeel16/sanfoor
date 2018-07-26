@@ -1,3 +1,4 @@
+import { QuestionsPage } from './../questions/questions';
 import { FunProvider } from './../../providers/fun/fun';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
@@ -36,4 +37,5 @@ export class ResidencefilterPage {
     console.log('ionViewDidLoad ResidencefilterPage');
   }
 
+ 
 }
