@@ -3,6 +3,7 @@ import { AuthProvider } from './../../providers/auth/auth';
 import { LoginPage } from './../login/login';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ResidencefilterPage } from '../residencefilter/residencefilter';
 
 @IonicPage()
 @Component({
@@ -23,8 +24,10 @@ export class HomePage {
     ]
     
 }
-ionViewDidLoad() {
-  setTimeout(() => this.splash = false, 4000);
+
+movetologin(){
+  this.navCtrl.push(LoginPage, {
+  });
 }
 signOut() {
   this.auth.signOut();
@@ -34,7 +37,14 @@ signOut() {
 questionpage(){
   this.navCtrl.push(QuestionsPage);
 }
+movetoresidencelist(){
+  this.navCtrl.push(ResidencefilterPage,{
+  });
 }
 
+ionViewDidLoad() {
+  setTimeout(() => this.splash = false, 4000);
+}
 
+}
 
