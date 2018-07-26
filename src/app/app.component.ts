@@ -6,13 +6,11 @@ import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
-import { ResidenceProfilePage } from '../pages/residence-profile/residence-profile';
-import { ResidencefilterPage } from '../pages/residencefilter/residencefilter';
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = QuestionsPage;
+  rootPage:any;
 
   constructor(platform: Platform, afAuth: AngularFireAuth, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
@@ -23,7 +21,7 @@ export class MyApp {
           if (user) {
             this.rootPage = HomePage;
           } else {
-            this.rootPage = QuestionsPage;
+            this.rootPage = LoginPage;
           }
           statusBar.styleDefault();
           splashScreen.hide();

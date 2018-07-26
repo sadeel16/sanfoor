@@ -1,8 +1,3 @@
-import { QuestionsPageModule } from './../pages/questions/questions.module';
-import { QuestionsPage } from './../pages/questions/questions';
-import { ResidencefilterPage } from './../pages/residencefilter/residencefilter';
-import { ResidenceProfilePageModule } from './../pages/residence-profile/residence-profile.module';
-import { ResidenceProfilePage } from './../pages/residence-profile/residence-profile';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -18,22 +13,17 @@ import { firebaseConfig } from '../config';
 import { LoginPageModule } from './../pages/login/login.module';
 import { AuthProvider } from '../providers/auth/auth';
 import { SignupPageModule } from './../pages/signup/signup.module';
-import { SignupPage} from './../pages/signup/signup';
-import { LoginPage } from '../pages/login/login';
 import { SellerProfilePageModule } from '../pages/seller-profile/seller-profile.module';
-
+import { QuestionsPageModule } from './../pages/questions/questions.module';
+import { ResidencefilterPageModule } from '../pages/residencefilter/residencefilter.module';
+import { ResidenceProfilePageModule } from './../pages/residence-profile/residence-profile.module';
 
 
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
-    ResidenceProfilePage,
-    ResidencefilterPage,
-    QuestionsPage,
-    LoginPage,
-    SignupPage
+    HomePage
   ],
   imports: [
     BrowserModule,
@@ -42,8 +32,9 @@ import { SellerProfilePageModule } from '../pages/seller-profile/seller-profile.
     LoginPageModule,
     SignupPageModule,
     ResidenceProfilePageModule,
-    // QuestionsPageModule
+    QuestionsPageModule,
     SellerProfilePageModule,
+    ResidencefilterPageModule
     
 
 
@@ -52,12 +43,7 @@ import { SellerProfilePageModule } from '../pages/seller-profile/seller-profile.
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
-    QuestionsPage,
-    LoginPage,
-    SignupPage,
-    ResidencefilterPage,
-    ResidenceProfilePage
+    HomePage
 
   ],
   providers: [
