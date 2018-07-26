@@ -33,6 +33,15 @@ export class FunProvider {
     });
   }
 
+  addUinfo(info) {
+
+    return this.db.list('info').push({
+      username: info.username,
+      phone: info.phone, 
+    
+    });
+  }
+
   removePost(id) {
     this.db.list('post').remove(id);
   }
