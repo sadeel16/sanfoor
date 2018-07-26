@@ -14,5 +14,10 @@
 
 
 <ion-content padding>
+    <ion-item *ngFor="let post of posts | async"  (click)="selectpost(post.key)">
+        {{ post.payload.val().description }} 
+       
+      
+      </ion-item>
 
 </ion-content>
