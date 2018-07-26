@@ -1,15 +1,10 @@
-import { FunProvider } from './../providers/fun/fun';
-import { QuestionsPageModule } from './../pages/questions/questions.module';
-import { HomePageModule } from './../pages/home/home.module';
-import { ResidencesPageModule } from './../pages/residences/residences.module';
-import { ResidenceProfilePageModule } from './../pages/residence-profile/residence-profile.module';
-import { ResidenceProfilePage } from './../pages/residence-profile/residence-profile';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
+import { FunProvider } from './../providers/fun/fun';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { AngularFireModule } from 'angularfire2';
@@ -20,7 +15,9 @@ import { LoginPageModule } from './../pages/login/login.module';
 import { AuthProvider } from '../providers/auth/auth';
 import { SignupPageModule } from './../pages/signup/signup.module';
 import { SellerProfilePageModule } from '../pages/seller-profile/seller-profile.module';
-
+import { QuestionsPageModule } from './../pages/questions/questions.module';
+import { ResidencefilterPageModule } from '../pages/residencefilter/residencefilter.module';
+import { ResidenceProfilePageModule } from './../pages/residence-profile/residence-profile.module';
 
 
 
@@ -28,7 +25,6 @@ import { SellerProfilePageModule } from '../pages/seller-profile/seller-profile.
   declarations: [
     MyApp,
     HomePage
-
   ],
   imports: [
     BrowserModule,
@@ -37,11 +33,10 @@ import { SellerProfilePageModule } from '../pages/seller-profile/seller-profile.
     LoginPageModule,
     SignupPageModule,
     ResidenceProfilePageModule,
-    SellerProfilePageModule,
-    ResidencesPageModule,
     QuestionsPageModule,
-
-
+    SellerProfilePageModule,
+    ResidencefilterPageModule
+    
 
 
 
@@ -49,8 +44,8 @@ import { SellerProfilePageModule } from '../pages/seller-profile/seller-profile.
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
-    ResidenceProfilePage
+    HomePage
+
   ],
   providers: [
     StatusBar,

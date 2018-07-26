@@ -1,4 +1,4 @@
-import { ResidencesPage } from './../residences/residences';
+import { ResidencefilterPage } from './../residencefilter/residencefilter';
 import { AuthProvider } from './../../providers/auth/auth';
 import { FunProvider } from './../../providers/fun/fun';
 import { Component } from '@angular/core';
@@ -48,7 +48,7 @@ export class QuestionsPage {
     
     this.funProvider.addPost(post)
       .then((post) => {
-      this.navCtrl.push(ResidencesPage)
+      this.navCtrl.push(ResidencefilterPage)
               
     });
 
@@ -60,5 +60,6 @@ export class QuestionsPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad QuestionsPage');
   }
+
 
 }

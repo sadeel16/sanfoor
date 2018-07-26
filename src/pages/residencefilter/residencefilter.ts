@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import { ResidenceProfilePage } from '../residence-profile/residence-profile';
 
 /**
- * Generated class for the ResidencesPage page.
+ * Generated class for the ResidencefilterPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -13,10 +13,10 @@ import { ResidenceProfilePage } from '../residence-profile/residence-profile';
 
 @IonicPage()
 @Component({
-  selector: 'page-residences',
-  templateUrl: 'residences.html',
+  selector: 'page-residencefilter',
+  templateUrl: 'residencefilter.html',
 })
-export class ResidencesPage {
+export class ResidencefilterPage {
   posts: Observable<any>;
   
   constructor(public navCtrl: NavController, public navParams: NavParams, private funProvider:FunProvider) {
@@ -33,7 +33,7 @@ export class ResidencesPage {
   }
   
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ResidencesPage');
+    console.log('ionViewDidLoad ResidencefilterPage');
   }
 
 }
