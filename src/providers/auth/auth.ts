@@ -28,6 +28,9 @@ export class AuthProvider {
 getEmail() {
   return this.user && this.user.email;
 }
+signOut() {
+  this.afAuth.auth.signOut();
+}
 
 
 

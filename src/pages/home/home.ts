@@ -1,3 +1,6 @@
+import { QuestionsPage } from './../questions/questions';
+import { AuthProvider } from './../../providers/auth/auth';
+import { LoginPage } from './../login/login';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -11,7 +14,7 @@ export class HomePage {
   ImageArray: any = [];
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, private auth: AuthProvider,public navParams: NavParams) {
     this.ImageArray = [
       {'image': '../assets/imgs/img1.jpg'},
       {'image': '../assets/imgs/RecentDeals.png'},
@@ -23,7 +26,14 @@ export class HomePage {
 ionViewDidLoad() {
   setTimeout(() => this.splash = false, 4000);
 }
+signOut() {
+  this.auth.signOut();
+  this.navCtrl.setRoot(LoginPage);
+}
 
+questionpage(){
+  this.navCtrl.push(QuestionsPage);
+}
 }
 
 

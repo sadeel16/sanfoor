@@ -10,8 +10,9 @@
   <!-- <div>
   <h1 style=" background-color: #55acee; font-family: Tahoma; color: white; float: left;">Recent Deals:</h1>
   </div> -->
-  <button ion-button round outline style=" margin-top:4%; text-align: center; margin-left: 20%"  >Offer your residence?</button>
-  <ion-slides autoplay = "3000" loop = "true" speed = "3000" effect="fade" >
+  <button (click) = "signOut()" ion-button round outline style="float:left; margin-top:7%; width: 30%; ">Logout</button>
+  <button (click) = "questionpage()" ion-button round outline style="float:right; margin-top:7%; width: 50%; ">Offer your residence?</button>
+  <ion-slides autoplay = "3000" loop = "true" speed = "3000" effect="fade"margin-top >
 
     <ion-slide *ngFor = "let image of ImageArray" >
     
@@ -20,7 +21,7 @@
   </ion-slides>
 
   <!-- <h1 style="mfont-family: Arial, Helvetica, sans-serif; color:white; margin-bottom:100px;background-color: rgb(58, 58, 114)">If you are a student, pleases choose your college. If you want to offer your own residence, scroll down</h1> --> -->
-  <div  style="margin-top: -125%;">
+  <div  style="margin-top: -105%;">
   <ion-card style="width: 40%; height: 35%; float: left; margin-top: -5px;">
     <img src="../assets/imgs/Najah.png" />
     <ion-card-content>
