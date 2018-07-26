@@ -9,7 +9,7 @@
     <ion-list inset>
       <div class="form-error">{{signupError}}</div>
       <ion-item>
-        <ion-input type="text" placeholder="Full Name" name="Full Name"></ion-input>
+        <ion-input [(ngModel)] = "FullName" type="text" placeholder="Full Name" name="FullName"></ion-input>
       </ion-item>
       <ion-item>
         <ion-input type="text" placeholder="PhoneNumber" name="PhoneNumber"></ion-input>

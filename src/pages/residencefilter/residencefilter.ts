@@ -18,7 +18,12 @@ import { ResidenceProfilePage } from '../residence-profile/residence-profile';
   templateUrl: 'residencefilter.html',
 })
 export class ResidencefilterPage {
+  allTeamDivisions(arg0: any, arg1: any): any {
+    throw new Error("Method not implemented.");
+  }
   posts: Observable<any>;
+  queryText: string;
+  teams =  [];
   
   constructor(public navCtrl: NavController, public navParams: NavParams, private funProvider:FunProvider) {
     this.posts= funProvider.getPosts();
@@ -37,5 +42,17 @@ export class ResidencefilterPage {
     console.log('ionViewDidLoad ResidencefilterPage');
   }
 
+  // updateTeams(){
+  //   let queryTextLower = this.queryText.toLowerCase();
+  //   let filteredTeams = [];
+  //   _.forEach(this.allTeamDivisions, td => {
+  //     let teams = _.filter(td.divisionTeams, t => (<any>t).name.toLowerCase().includes(queryTextLower));
+  //     if (teams.length){
+  //       filteredTeams.push({ divisionName: td.divisionName, divisionTeams: teams});
+
+  //     }
+  //   });
+  //   this.teams = filteredTeams
+  // }
  
 }
