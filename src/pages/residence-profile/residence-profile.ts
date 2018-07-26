@@ -17,6 +17,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ResidenceProfilePage {
   post:any;
+  ImageArray : any = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private funProvider:FunProvider) {
     const key = navParams.get('key');
@@ -27,6 +28,16 @@ export class ResidenceProfilePage {
         this.post = post.payload.val();
       }
     });
+ 
+
+  
+
+    this.ImageArray = [
+      {'image' : '../../assets/imgs/1.jpg'},
+      {'image' : '../../assets/imgs/2.jpg'},
+      {'image' : '../../assets/imgs/3.jpg'}
+    ]
+
   }
 
   ionViewDidLoad() {

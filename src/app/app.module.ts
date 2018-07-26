@@ -1,3 +1,9 @@
+import { FunProvider } from './../providers/fun/fun';
+import { QuestionsPageModule } from './../pages/questions/questions.module';
+import { HomePageModule } from './../pages/home/home.module';
+import { ResidencesPageModule } from './../pages/residences/residences.module';
+import { ResidenceProfilePageModule } from './../pages/residence-profile/residence-profile.module';
+import { ResidenceProfilePage } from './../pages/residence-profile/residence-profile';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -13,6 +19,7 @@ import { firebaseConfig } from '../config';
 import { LoginPageModule } from './../pages/login/login.module';
 import { AuthProvider } from '../providers/auth/auth';
 import { SignupPageModule } from './../pages/signup/signup.module';
+import { SellerProfilePageModule } from '../pages/seller-profile/seller-profile.module';
 
 
 
@@ -21,20 +28,29 @@ import { SignupPageModule } from './../pages/signup/signup.module';
   declarations: [
     MyApp,
     HomePage
+
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseConfig),
     LoginPageModule,
-    SignupPageModule
+    SignupPageModule,
+    ResidenceProfilePageModule,
+    SellerProfilePageModule,
+    ResidencesPageModule,
+    QuestionsPageModule,
+
+
+
 
 
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    ResidenceProfilePage
   ],
   providers: [
     StatusBar,
@@ -43,6 +59,7 @@ import { SignupPageModule } from './../pages/signup/signup.module';
     AngularFireAuth,
    AngularFireDatabase,
     AuthProvider,
+    FunProvider
 
   ]
 })
