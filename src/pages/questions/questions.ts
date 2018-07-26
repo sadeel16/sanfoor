@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Validators, FormBuilder, FormGroup, FormControl } from '@angular/forms';
+
+
 
 /**
  * Generated class for the QuestionsPage page.
@@ -14,12 +17,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'questions.html',
 })
 export class QuestionsPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  genders = ['male', 'female']
+  services = [
+    'water',
+    'electricity',
+    'wifi'
+  ]
+  constructor(public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad QuestionsPage');
   }
+
 
 }

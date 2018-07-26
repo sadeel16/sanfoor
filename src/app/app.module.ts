@@ -1,3 +1,6 @@
+import { QuestionsPageModule } from './../pages/questions/questions.module';
+import { QuestionsPage } from './../pages/questions/questions';
+import { ResidencefilterPage } from './../pages/residencefilter/residencefilter';
 import { ResidenceProfilePageModule } from './../pages/residence-profile/residence-profile.module';
 import { ResidenceProfilePage } from './../pages/residence-profile/residence-profile';
 import { BrowserModule } from '@angular/platform-browser';
@@ -15,6 +18,8 @@ import { firebaseConfig } from '../config';
 import { LoginPageModule } from './../pages/login/login.module';
 import { AuthProvider } from '../providers/auth/auth';
 import { SignupPageModule } from './../pages/signup/signup.module';
+import { SignupPage} from './../pages/signup/signup';
+import { LoginPage } from '../pages/login/login';
 
 
 
@@ -22,7 +27,12 @@ import { SignupPageModule } from './../pages/signup/signup.module';
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    ResidenceProfilePage,
+    ResidencefilterPage,
+    QuestionsPage,
+    LoginPage,
+    SignupPage
   ],
   imports: [
     BrowserModule,
@@ -30,7 +40,9 @@ import { SignupPageModule } from './../pages/signup/signup.module';
     AngularFireModule.initializeApp(firebaseConfig),
     LoginPageModule,
     SignupPageModule,
-    ResidenceProfilePageModule
+    ResidenceProfilePageModule,
+    ResidenceProfilePageModule,
+    // QuestionsPageModule
 
 
   ],
@@ -38,7 +50,12 @@ import { SignupPageModule } from './../pages/signup/signup.module';
   entryComponents: [
     MyApp,
     HomePage,
+    QuestionsPage,
+    LoginPage,
+    SignupPage,
+    ResidencefilterPage,
     ResidenceProfilePage
+
   ],
   providers: [
     StatusBar,
