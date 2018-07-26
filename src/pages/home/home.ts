@@ -1,5 +1,7 @@
+import { LoginPage } from './../login/login';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ResidencefilterPage } from '../residencefilter/residencefilter';
 
 @IonicPage()
 @Component({
@@ -20,6 +22,17 @@ export class HomePage {
     ]
     
 }
+
+movetologin(){
+  this.navCtrl.push(LoginPage, {
+  });
+}
+
+movetoresidencelist(){
+  this.navCtrl.push(ResidencefilterPage,{
+  });
+}
+
 ionViewDidLoad() {
   setTimeout(() => this.splash = false, 4000);
 }
