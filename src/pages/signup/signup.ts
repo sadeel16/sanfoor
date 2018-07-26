@@ -21,6 +21,12 @@ export class SignupPage {
  }
 
  signup() {
+   if (!this.email){
+     return;
+   }
+   if (!this.password){
+     return;
+   }
     const credentials = {
       email: this.email,
       password: this.password
