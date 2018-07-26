@@ -20,6 +20,7 @@ import { AuthProvider } from '../providers/auth/auth';
 import { SignupPageModule } from './../pages/signup/signup.module';
 import { SignupPage} from './../pages/signup/signup';
 import { LoginPage } from '../pages/login/login';
+import { SellerProfilePageModule } from '../pages/seller-profile/seller-profile.module';
 
 
 
@@ -41,8 +42,10 @@ import { LoginPage } from '../pages/login/login';
     LoginPageModule,
     SignupPageModule,
     ResidenceProfilePageModule,
-    ResidenceProfilePageModule,
     // QuestionsPageModule
+    SellerProfilePageModule,
+    
+
 
 
   ],
