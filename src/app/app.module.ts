@@ -1,3 +1,4 @@
+import { ResidencesPageModule } from './../pages/residences/residences.module';
 import { ResidenceProfilePageModule } from './../pages/residence-profile/residence-profile.module';
 import { ResidenceProfilePage } from './../pages/residence-profile/residence-profile';
 import { BrowserModule } from '@angular/platform-browser';
@@ -15,6 +16,7 @@ import { firebaseConfig } from '../config';
 import { LoginPageModule } from './../pages/login/login.module';
 import { AuthProvider } from '../providers/auth/auth';
 import { SignupPageModule } from './../pages/signup/signup.module';
+import { SellerProfilePageModule } from '../pages/seller-profile/seller-profile.module';
 
 
 
@@ -23,6 +25,7 @@ import { SignupPageModule } from './../pages/signup/signup.module';
   declarations: [
     MyApp,
     HomePage
+
   ],
   imports: [
     BrowserModule,
@@ -30,7 +33,10 @@ import { SignupPageModule } from './../pages/signup/signup.module';
     AngularFireModule.initializeApp(firebaseConfig),
     LoginPageModule,
     SignupPageModule,
-    ResidenceProfilePageModule
+    ResidenceProfilePageModule,
+    SellerProfilePageModule,
+    ResidencesPageModule
+
 
 
   ],
