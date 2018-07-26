@@ -24,6 +24,7 @@ export class QuestionsPage {
   gender: any;
   university: any;
   transportation: any;
+  location:any;
 
 
 
@@ -41,7 +42,8 @@ export class QuestionsPage {
     transportation: this.transportation,
     university: this.university,
     services: this.services,
-    description: this.description
+    description: this.description,
+    location: this.location
     
   }
 
@@ -54,11 +56,7 @@ export class QuestionsPage {
 
   }
 
-  // // goToImageUpload(){
-  //   this.navCtrl.push(MultiImageUpload)
-  // }
-
-  
+ 
  
 
   ionViewDidLoad() {

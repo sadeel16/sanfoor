@@ -29,7 +29,8 @@ export class FunProvider {
       transportation: post.transportation, 
       university: post.university, 
       service: post.services, 
-      description: post.description
+      description: post.description,
+      location: post.location
     });
   }
 

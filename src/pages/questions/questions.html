@@ -36,16 +36,18 @@
         </ion-select>
       </ion-item>
     </div>
+    
+    <ion-item>
+      <ion-label type="text" floating color="primary">Location</ion-label>
+      <ion-input  [(ngModel)]="location" type="text" class="form-control" required></ion-input>
+    </ion-item>
 
     <ion-item>
       <ion-input [(ngModel)]="description" type="text" placeholder="Description" color="primary">Description</ion-input>
         <!--<ion-label [(ngModel)]="description" type="text" floating color="primary">Description</ion-label>
         <ion-input type="text"></ion-input>-->
       </ion-item>
-    <button style="width: 45%;" ion-button icon-location>
-        <ion-icon  style="margin-right: 5%" name="pin"></ion-icon>
-        Location
-      </button>
+    
     <button class="camera" style="width: 50%;" ion-button icon-camera>
         <ion-icon style="margin-right: 5%" name="camera"></ion-icon>
         Upload image
