@@ -10,23 +10,20 @@
     <br>
     <button *ngIf="userData" ion-button outline style="margin-left: 13px">{{userData.FullName}}</button>
     <div float-right>
-      <ion-icon (click)="openquestionpage()" name="add" style="padding: 5px 15px; font-size: 35px;">
+     
 
-      </ion-icon>
     </div>
 
 
     <ion-card *ngFor="let post of posts | async">
       <img src="../assets/imgs/sakann.jpg" />
       <ion-card-content>
-        <ion-card-title>
-          Residence (1)
-        </ion-card-title>
+       
         <p>
           <ion-row>
             <ion-col>
               <div>
-                {{ post.payload.val().description}} {{ post.payload.val().price}} {{ post.payload.val().gender}}
+                {{ post.payload.val().price}} {{ post.payload.val().gender}}
               </div>
 
             </ion-col>
@@ -34,7 +31,7 @@
             <ion-row>
             <ion-col>
               <button ion-button icon-start clear small>
-                <div style="margin-right:150px">* 170 Meters</div>
+               
               </button>
             </ion-col>
             <ion-col center text-center>
@@ -43,7 +40,7 @@
           </ion-row>
         </p>
         <div float-right>
-          <!-- <button  (click)="selectpost(post.key)" ion-button outlinestyle="margin-left: 75px">Edit</button> -->
+          <button  (click)="selectpost(post.key)" ion-button outlinestyle="margin-left: 75px">More Details</button>
 
         </div>
       </ion-card-content>
