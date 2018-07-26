@@ -8,7 +8,7 @@
 <ion-content>
   <ion-content>
     <br>
-    <button ion-button outline style="margin-left: 13px">User Name</button>
+    <button *ngIf="userData" ion-button outline style="margin-left: 13px">{{userData.FullName}}</button>
     <div float-right>
       <ion-icon (click) = "openquestionpage()" name="add" style="padding: 5px 15px; font-size: 35px;">
 
@@ -46,7 +46,7 @@
           </ion-row>
         </p>
         <div float-right>
-          <button  (click)="selectpost(post.key)" ion-button outlinestyle="margin-left: 75px">Edit</button>
+          <button  (click)="selectpost(post.key)" ion-button outlinestyle="margin-left: 75px">Preview</button>
 
       </div>
     </ion-card-content>

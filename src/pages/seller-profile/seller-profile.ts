@@ -21,26 +21,36 @@ import { FunProvider } from '../../providers/fun/fun';
 })
 export class SellerProfilePage {
   posts: Observable<any>;
+  userData: any;
 
-  constructor(public navCtrl: NavController, 
-    public navParams: NavParams, 
-    public authProvider:AuthProvider, private funpProvider:FunProvider) {
-      this.posts= funpProvider.getPosts();
-       }
+  constructor(public navCtrl: NavController,
+    public navParams: NavParams,
+    public auth: AuthProvider, private funpProvider: FunProvider) {
+    this.posts = funpProvider.getPosts();
+    auth.getExtraUserData().subscribe((UserData) => {
+      this.userData = UserData
+    });
+  }
 
-       selectpost(key) {
-        this.navCtrl.push(ResidenceProfilePage, {
-          key
-        });
-      }
-  
+  selectpost(key) {
+    this.navCtrl.push(ResidenceProfilePage, {
+      key
+    });
+  }
+
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SellerProfilePage');
-  
+
   }
 
-  openquestionpage(){
+
+  getFullName() {
+
+  }
+
+
+  openquestionpage() {
     this.navCtrl.push(QuestionsPage);
   }
 

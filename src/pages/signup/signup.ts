@@ -12,6 +12,7 @@ export class SignupPage {
  signupError: string;
  email: string;
  password: string;
+ FullName: any;
 
  constructor(public navCtrl: NavController, private auth: AuthProvider, public navParams: NavParams) {
  }
@@ -22,14 +23,16 @@ export class SignupPage {
 
  signup() {
    if (!this.email){return}
-  
    if (!this.password){return}
 
     const credentials = {
       email: this.email,
-      password: this.password
+      password: this.password,
     };
-    this.auth.signUp(credentials).then(
+    const extraUserInfo = {
+      FullName: this.FullName
+    };
+    this.auth.signUp(credentials, extraUserInfo).then(
       () => this.navCtrl.setRoot(HomePage),
       error => this.signupError = error.message
     );
