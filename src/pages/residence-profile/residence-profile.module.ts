@@ -4,7 +4,7 @@ import { ResidenceProfilePage } from './residence-profile';
 
 @NgModule({
   declarations: [
-    ResidenceProfilePage,
+    ResidenceProfilePage
   ],
   imports: [
     IonicPageModule.forChild(ResidenceProfilePage),
