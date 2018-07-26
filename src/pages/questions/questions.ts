@@ -4,7 +4,6 @@ import { FunProvider } from './../../providers/fun/fun';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Observable } from 'rxjs';
-import {MultiImageUpload} from "../multi-image-upload/multi-image-upload";
 
 
 @IonicPage()
